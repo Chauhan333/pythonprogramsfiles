@@ -1,0 +1,9 @@
+#find the age in year using python 
+from datetime import datetime
+def cal_year(birth_year):
+    curr_year=datetime.now().year
+    age=curr_year-birth-year
+    return age
+birth_year=int(input("enter your born year/n"))
+age=cal_age(birth_year)
+print(f"your age is:{age} years")
