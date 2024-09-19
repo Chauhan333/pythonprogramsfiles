@@ -1,0 +1,22 @@
+def convert_currency(amount, exchange_rate):
+    return amount * exchange_rate
+
+def main():
+    print("Welcome to the Currency Converter!")
+    
+    try:
+        amount = float(input("Enter the amount in your currency: "))
+        exchange_rate = float(input("Enter the exchange rate to the target currency: "))
+        
+        if amount < 0 or exchange_rate <= 0:
+            print("Amount must be non-negative and exchange rate must be positive.")
+            return
+        
+        converted_amount = convert_currency(amount, exchange_rate)
+        print(f"Converted amount: {converted_amount:.2f} in target currency.")
+    
+    except ValueError:
+        print("Please enter valid numerical values.")
+
+if __name__ == "__main__":
+    main()
